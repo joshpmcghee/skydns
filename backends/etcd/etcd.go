@@ -11,8 +11,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/skynetservices/skydns/msg"
-	"github.com/skynetservices/skydns/singleflight"
+	"github.com/joshpmcghee/skydns/msg"
+	"github.com/joshpmcghee/skydns/singleflight"
 
 	etcd "github.com/coreos/etcd/client"
 	"golang.org/x/net/context"
@@ -147,11 +147,16 @@ Nodes:
 		if err := json.Unmarshal([]byte(n.Value), serv); err != nil {
 			return nil, err
 		}
-		b := bareService{serv.Host, serv.Port, serv.Priority, serv.Weight, serv.Text}
-		if _, ok := bx[b]; ok {
-			continue
-		}
-		bx[b] = true
+
+		/*
+			b := bareService{serv.Host, serv.Port, serv.Priority, serv.Weight, serv.Text}
+			if kx, ok := bx[b]; ok {
+				if kx.Split(n.Key, "/")[:-1] == n.Key.Split(n.Key, "/")[:-1] {
+					continue
+				}
+			}
+			bx[b] = n.Key
+		*/
 
 		serv.Key = n.Key
 		serv.Ttl = g.calculateTtl(n, serv)

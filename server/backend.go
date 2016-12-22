@@ -4,7 +4,7 @@
 
 package server
 
-import "github.com/skynetservices/skydns/msg"
+import "github.com/joshpmcghee/skydns/msg"
 
 type Backend interface {
 	Records(name string, exact bool) ([]msg.Service, error)

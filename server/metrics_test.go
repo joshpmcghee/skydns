@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/skynetservices/skydns/metrics"
+	"github.com/joshpmcghee/skydns/metrics"
 
 	"github.com/miekg/dns"
 )

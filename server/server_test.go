@@ -16,9 +16,9 @@ import (
 	"testing"
 	"time"
 
-	backendetcd "github.com/skynetservices/skydns/backends/etcd"
-	"github.com/skynetservices/skydns/cache"
-	"github.com/skynetservices/skydns/msg"
+	backendetcd "github.com/joshpmcghee/skydns/backends/etcd"
+	"github.com/joshpmcghee/skydns/cache"
+	"github.com/joshpmcghee/skydns/msg"
 
 	etcd "github.com/coreos/etcd/client"
 	"github.com/miekg/dns"

@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/skynetservices/skydns/cache"
-	"github.com/skynetservices/skydns/metrics"
-	"github.com/skynetservices/skydns/msg"
+	"github.com/joshpmcghee/skydns/cache"
+	"github.com/joshpmcghee/skydns/metrics"
+	"github.com/joshpmcghee/skydns/msg"
 
 	etcd "github.com/coreos/etcd/client"
 	"github.com/coreos/go-systemd/activation"

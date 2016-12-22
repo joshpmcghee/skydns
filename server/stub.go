@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/joshpmcghee/skydns/msg"
 	"github.com/miekg/dns"
-	"github.com/skynetservices/skydns/msg"
 )
 
 const ednsStubCode = dns.EDNS0LOCALSTART + 10
@@ -32,6 +32,7 @@ var ednsStub = func() *dns.OPT {
 // extract <domain> and add them as forwarders (ip:port-combos) for
 // the stub zones. Only numeric (i.e. IP address) hosts are used.
 func (s *server) UpdateStubZones() {
+	logf("updating stubzones...")
 	stubmap := make(map[string][]string)
 
 	services, err := s.backend.Records("stub.dns."+s.config.Domain, false)
@@ -62,7 +63,6 @@ func (s *server) UpdateStubZones() {
 		}
 		stubmap[domain] = append(stubmap[domain], net.JoinHostPort(serv.Host, strconv.Itoa(serv.Port)))
 	}
-
 	s.config.stub = &stubmap
 }
 

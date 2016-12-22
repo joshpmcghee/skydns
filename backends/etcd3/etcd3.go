@@ -10,9 +10,9 @@ package etcd3
 import (
 	etcdv3 "github.com/coreos/etcd/clientv3"
 	"golang.org/x/net/context"
-	"github.com/skynetservices/skydns/singleflight"
+	"github.com/joshpmcghee/skydns/singleflight"
 	"strings"
-	"github.com/skynetservices/skydns/msg"
+	"github.com/joshpmcghee/skydns/msg"
 	"fmt"
 	"github.com/coreos/etcd/mvcc/mvccpb"
 	"encoding/json"

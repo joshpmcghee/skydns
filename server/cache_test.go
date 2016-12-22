@@ -8,7 +8,7 @@ import (
 	"testing"
 
 	"github.com/miekg/dns"
-	"github.com/skynetservices/skydns/cache"
+	"github.com/joshpmcghee/skydns/cache"
 )
 
 func TestFit(t *testing.T) {

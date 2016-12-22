@@ -1,4 +1,4 @@
-# SkyDNS [![Build Status](https://travis-ci.org/skynetservices/skydns.png?branch=master)](https://travis-ci.org/skynetservices/skydns)
+# SkyDNS [![Build Status](https://travis-ci.org/joshpmcghee/skydns.png?branch=master)](https://travis-ci.org/joshpmcghee/skydns)
 *Version 2.5.3a*
 
 SkyDNS is a distributed service for announcement and discovery of services built
@@ -23,7 +23,7 @@ SkyDNS2:
 
 Note that bugs in SkyDNS1 will still be fixed, but the main development effort
 will be focussed on version 2. [Version 1 of SkyDNS can be found
-here](https://github.com/skynetservices/skydns1).
+here](https://github.com/joshpmcghee/skydns1).
 
 
 ## Setup / Install
@@ -32,8 +32,8 @@ Download/compile and run etcd. See the documentation for etcd at <https://github
 
 Then get and compile SkyDNS:
 
-    go get github.com/skynetservices/skydns
-    cd $GOPATH/src/github.com/skynetservices/skydns
+    go get github.com/joshpmcghee/skydns
+    cd $GOPATH/src/github.com/joshpmcghee/skydns
     go build -v
 
 SkyDNS' configuration is stored *in* etcd: but there are also flags and
@@ -713,7 +713,7 @@ By default SkyDNS will returns *all* records under a name. Suppose you want we h
 
 # Docker
 
-Official Docker images are at the [Docker Hub](https://registry.hub.docker.com/u/skynetservices/skydns/):
+Official Docker images are at the [Docker Hub](https://registry.hub.docker.com/u/joshpmcghee/skydns/):
 
 * master -> skynetservices/skydns:latest
 * latest tag -> skynetservices/skydns:latest-tagged
